@@ -1,11 +1,10 @@
-import { createContext, userState, useMemo, useState } from "react";
+import { createContext,  useMemo, useState } from "react";
 import { createTheme } from "@mui/material/styles";
 
 //color design tokens
 export const tokens = (mode) => ({
     ...(mode === 'dark' 
-        ? 
-        {
+        ? {
             grey: {
                 100: "#e0e0e0",
                 200: "#c2c2c2",
@@ -116,9 +115,9 @@ export const tokens = (mode) => ({
                 700: "#a4a9fc",
                 800: "#c3c6fd",
                 900: "#e1e2fe",
-            }
-        })
-})
+            },
+        }),
+});
 
 // mui theme settings
 
@@ -127,8 +126,8 @@ export const themeSettings = (mode) => {
 
     return {
         palette: {
-            mode:mode,
-            ...colors(mode === 'dark'
+            mode: mode,
+            ...(mode === 'dark'
             ? {
                 primary: {
                     main: colors.primary[500],
@@ -143,7 +142,7 @@ export const themeSettings = (mode) => {
                     },
                 background: {
                     default: colors.primary[500],
-                    }
+                    },
             } : {
                 primary: {
                     main: colors.primary[100],
@@ -158,9 +157,8 @@ export const themeSettings = (mode) => {
                     },
                 background: {
                     default: '#fcfcfc',
-                    }
-                }
-            )
+                    },
+                }),
         },
         typography:{
             fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
@@ -189,9 +187,9 @@ export const themeSettings = (mode) => {
                 fontFamily: ['Source Sans Pro', 'sans-serif'].join(','),
             fontSize: 14,
             },
-        }
-    }
-}
+        },
+    };
+};
 
 //context for color mode
 
