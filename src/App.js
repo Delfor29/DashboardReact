@@ -27,8 +27,8 @@ function App() {
         <CssBaseline />
       <div className="App">
         <main className='content'>
-
           <Topbar />
+          <Sidebar />
           <Routes>
             <Route path="/" element={<Dashboard />} />
             {/* <Route path="/team" element={<Team />} /> */}
