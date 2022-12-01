@@ -21,14 +21,13 @@ function App() {
   const [theme, colorMode] = useMode();
 
   return (
-    <>
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-      <div className="App">
+      <div className="app">
+          <Sidebar />
         <main className='content'>
           <Topbar />
-          <Sidebar />
           <Routes>
             <Route path="/" element={<Dashboard />} />
             {/* <Route path="/team" element={<Team />} /> */}
@@ -46,7 +45,6 @@ function App() {
       </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
-    </>
   );
 }
 export default App;
