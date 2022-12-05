@@ -60,7 +60,7 @@ const Calendar = () => {
                         Events
                     </Typography>
                     <List>
-                        {currentEvents.map(event) => (
+                        {currentEvents.map((event) => (
                             <ListItem
                              key={event.id}
                              sx={{
@@ -71,7 +71,7 @@ const Calendar = () => {
                              >
 
                             </ListItem>
-                        )}
+                        ))}
                     </List>
                 </Box>
             </Box>
