@@ -15,31 +15,31 @@ const GeographyChart = ({ isDashboard = false }) => {
             axis: {
                 domain: {
                     line: {
-                        stroke: colors.grey[100],
+                        stroke: colors.grey[300],
                     },
                 },
                 legen: {
                     text: {
-                        fill: colors.grey[100],
+                        fill: colors.grey[300],
                     },
                 },
                 ticks: {
                     line: {
-                        stroke: colors.grey[100],
+                        stroke: colors.grey[300],
                         strokeWidth: 1,
                     },
                     text: {
-                        fill: colors.grey[100],
+                        fill: colors.grey[300],
                     },
                 },
             },
             legends: {
                 text: {
-                    fill: colors.grey[100],
+                    fill: colors.grey[300],
                 },
             },
          }}
-         feautures={geoFeatures.features}
+         features={geoFeatures.features}
          margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
          domain={[0, 1000000]}
          unknownColor='#666666'
@@ -63,7 +63,7 @@ const GeographyChart = ({ isDashboard = false }) => {
                     itemWidth: 94,
                     itemHeight: 18,
                     itemDirection: 'left-to-right',
-                    itemTextColor: colors.grey[100],
+                    itemTextColor: colors.grey[300],
                     itemOpacity: 0.85,
                     symbolSize: 18,
                     effects: [

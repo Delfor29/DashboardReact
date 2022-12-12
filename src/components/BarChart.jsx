@@ -16,7 +16,7 @@ return (
             axis:{
                 domain: {
                     line: {
-                        stroke: colors.grey[100]              
+                        stroke: colors.grey[300]              
                     }
                 },
             }
