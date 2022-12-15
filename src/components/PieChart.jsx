@@ -1,8 +1,10 @@
 import {useTheme} from "@mui/material";
 import {ResponsiveBar} from "@nivo/bar";
 import{ tokens} from "../theme";
-import{mockDataTeam as data} from "../data/mockData";
+import{mockPieData as data} from "../data/mockData";
 const PieChart = () => {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
 
 return ( 
 <ResponsivePie
@@ -51,7 +53,7 @@ return (
         ]
     }}
     arcLinkLabelsSkipAngle={10}
-    arcLinkLabelsTextColor="#333333"
+    arcLinkLabelsTextColor={colors.grey[100]}
     arcLinkLabelsThickness={2}
     arcLinkLabelsColor={{ from: 'color' }}
     arcLabelsSkipAngle={10}
@@ -82,57 +84,7 @@ return (
             rotation: -45,
             lineWidth: 6,
             spacing: 10
-        }
-    ]}
-    fill={[
-        {
-            match: {
-                id: 'ruby'
-            },
-            id: 'dots'
         },
-        {
-            match: {
-                id: 'c'
-            },
-            id: 'dots'
-        },
-        {
-            match: {
-                id: 'go'
-            },
-            id: 'dots'
-        },
-        {
-            match: {
-                id: 'python'
-            },
-            id: 'dots'
-        },
-        {
-            match: {
-                id: 'scala'
-            },
-            id: 'lines'
-        },
-        {
-            match: {
-                id: 'lisp'
-            },
-            id: 'lines'
-        },
-        {
-            match: {
-                id: 'elixir'
-            },
-            id: 'lines'
-        },
-        {
-            match: {
-                id: 'javascript'
-            },
-            id: 'lines'
-        }
     ]}
     legends={[
         {
