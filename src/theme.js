@@ -4,8 +4,7 @@ import { createTheme } from "@mui/material/styles";
 //color design tokens
 export const tokens = (mode) => ({
     ...(mode === 'dark' 
-        ? 
-        {
+        ? {
             grey: {
                 100: "#e0e0e0",
                 200: "#c2c2c2",
@@ -144,7 +143,8 @@ export const themeSettings = (mode) => {
                 background: {
                     default: colors.primary[500],
                     }
-            } : {
+            } 
+            : {
                 primary: {
                     main: colors.primary[100],
                     },
@@ -152,9 +152,9 @@ export const themeSettings = (mode) => {
                     main: colors.greenAccent[500],
                     },
                 neutral: {
-                    dark: colors.grey[700],
+                    dark: colors.grey[100],
                     main: colors.grey[500],
-                    light: colors.grey[100],
+                    light: colors.grey[700],
                     },
                 background: {
                     default: '#fcfcfc',
