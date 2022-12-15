@@ -15,17 +15,19 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
              display='flex'
              justifyContent='space-between'
              >
-                {icon}
-                <Typography 
-                 variant='h4'
-                 fontWeight='bold'
-                 sx={{ colors: colors.grey[100] }}
-                 >
-                    {title}
-                </Typography>
-            </Box>
-            <Box>
-                <ProgressCircle progress={progress} />
+                <Box>
+                    {icon}
+                    <Typography 
+                     variant='h4'
+                     fontWeight='bold'
+                     sx={{ colors: colors.grey[100] }}
+                     >
+                        {title}
+                    </Typography>
+                </Box>
+                <Box>
+                    <ProgressCircle progress={progress} />
+                </Box>
             </Box>
             <Box 
              display='flex'
@@ -45,7 +47,6 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
                     {increase}
                 </Typography>
             </Box>
-
         </Box>
         );
 };
